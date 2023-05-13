@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="GBK">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        video {
+            width: 100%;
+            top: 0;
+            left: 0;
+            position: fixed;          
+            right:0;       
+            bottom: 0;          
+            min-width: 100%;          
+            min-height: 100%;   
+            z-index: 1;                     
+        }
+        #myclock {
+            height: 200px;
+            width: 300px;
+            margin: 20px auto;
+        }
+    </style>
+    <script type="text/javascript">
+        function disptime(){  
+        var today=new Date();  
+        var hh=today.getHours();  
+        var mm=today.getMinutes();  
+        var ss = today.getSeconds();
+        if(hh<10){hh='0'+hh;}  
+        if(mm<10){mm='0'+mm;}  
+        if(ss<10){ss='0'+ss;}  
+        document.getElementById("myclock").innerHTML="<h1>"+hh+":"+mm+":"+ss+"</h1>"
+        }
+        //setInterval（）方法可以按照指定的周期调用函数或计算表达式  
+        var mytime = setInterval("disptime()",1000);
+    </script>
+</head>
+
+<body onload="disptime()">
+    
+    <div>
+        <p id="myclock" style="text-align: center; font-size: 16px; font: italic; z-index: 2;position: absolute;color: aliceblue;"></p>
+        <!-- autoplay 自动播放  loop循环播放  muted 声音 preload 预加载 -->
+        <video id="v1" autoplay loop muted="" preload >
+            <source src="Ghost-Blade-002.mp4">
+        </video>
+    </div>
+    
+
+</body>
+</html>
