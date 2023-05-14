@@ -10,21 +10,17 @@
             margin: 0;
             padding: 0;
         }
-        video {
-            width: 100%;
-            top: 0;
-            left: 0;
-            position: fixed;          
-            right:0;       
-            bottom: 0;          
-            min-width: 100%;          
-            min-height: 100%;   
-            z-index: 1;                     
-        }
         #myclock {
             height: 200px;
             width: 300px;
             margin: 20px auto;
+        }
+        img{
+            position: fixed;  
+            z-index: 1;
+            height: 100%;
+            width: 100%;
+
         }
     </style>
     <script type="text/javascript">
@@ -47,10 +43,7 @@
     
     <div>
         <p id="myclock" style="text-align: center; font-size: 16px; font: italic; z-index: 2;position: absolute;color: aliceblue;"></p>
-        <!-- autoplay 自动播放  loop循环播放  muted 声音 preload 预加载 -->
-        <video id="v1" autoplay loop muted="" preload >
-            <source src="D:\Chrome_Download\Art\wallpapers\Ghost_Back\v-29.mp4">
-        </video>
+        <img src="wallhaven-rrywdj.png">
     </div>
     
 
